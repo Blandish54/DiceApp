@@ -2,9 +2,15 @@
 using System.Net.Security;
 using System.Reflection.Metadata.Ecma335;
 
+//TIP: try a "for" loop
 //As a user of this dice app
-//I want the ability to say how many sides my die has
-//so I can roll different sized dice
+//I want the ability to also say how many dice I should roll 
+//so I can roll multiple of the same die and get the sum of their values
+
+//As a user of this dice app
+//I want the ability to see the value of each die I rolled along with the sum total
+//So I can see what each die's value was
+
 bool rollDiceAgain = true;
 Random randomDiceGenerator = new Random();
 
