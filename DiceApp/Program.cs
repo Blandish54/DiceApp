@@ -2,7 +2,7 @@
 using System.Net.Security;
 using System.Reflection.Metadata.Ecma335;
 
-//TIP: try a "for" loop
+//TIP: look at our while loop example
 //As a user of this dice app
 //I want the ability to also say how many dice I should roll 
 //so I can roll multiple of the same die and get the sum of their values
@@ -16,6 +16,9 @@ Random randomDiceGenerator = new Random();
 
 Console.WriteLine("Hello and Welcome to The Dice App");
 Console.WriteLine("Please enter the number of sides you would like your die to have");
+
+
+
 
 while (rollDiceAgain)
 {
