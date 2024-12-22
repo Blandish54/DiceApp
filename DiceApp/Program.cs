@@ -51,8 +51,7 @@ while (rollDiceAgain)
     {
 
         if (isFirstDiceLoop)
-        {
-            Console.WriteLine("Also, enter the number of dice you would like to roll.");
+        { 
             isFirstDiceLoop = false;
         }
         else
@@ -60,7 +59,6 @@ while (rollDiceAgain)
             Console.WriteLine("It looks like you failed to enter a number.");
             Console.WriteLine("Enter a number to continue.");
         }
-
         string howManyDice = Console.ReadLine();
 
 
@@ -68,25 +66,27 @@ while (rollDiceAgain)
      }
     switch (numberOfSides)
     {
-        case 0:
+        case 1:
             numberOfSides = 2;
             break;
-        case 1:
+        case 2:
             numberOfSides = 6;
             break;
-        case 2:
+        case 3:
             numberOfSides = 10;
             break;
-        case 3:
+        case 4:
             numberOfSides = 20;
             break;
-        case 4:
+        case 5:
             numberOfSides = 100;
             break;
+        
         default:
             
             Console.WriteLine("It seems you have entered an incorrect input.");
             Console.WriteLine("Please select an input from the list above");
+            break;
         }       
     
 
