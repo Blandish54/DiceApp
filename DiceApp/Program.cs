@@ -14,7 +14,7 @@ Console.WriteLine("Hello and Welcome to The Dice App");
 
 while (rollDiceAgain)
 {
-    int diceSelection = 0;
+    int numberOfSides = 0;
     bool isSidesANumber = false;
     bool isFirstSidesLoop = true;
 
@@ -39,7 +39,7 @@ while (rollDiceAgain)
         }
         string howManySides = Console.ReadLine();
 
-        isSidesANumber = Int32.TryParse(howManySides, out diceSelection);
+        isSidesANumber = Int32.TryParse(howManySides, out numberOfSides);
         
         
     }
@@ -66,31 +66,27 @@ while (rollDiceAgain)
 
         isDiceInputOk = Int32.TryParse(howManyDice, out numberOfDice);
      }
-    switch (diceSelection)
+    switch (numberOfSides)
     {
         case 0:
-            = randomDiceGenerator.Next(1, 2);
+            numberOfSides = 2;
             break;
         case 1:
-            int standardDie = randomDiceGenerator.Next(1, 6);
+            numberOfSides = 6;
             break;
         case 2:
-            int d10 = randomDiceGenerator.Next(1, 10);
+            numberOfSides = 10;
             break;
         case 3:
-            int d20 = randomDiceGenerator.Next(1, 20);
+            numberOfSides = 20;
             break;
         case 4:
-            int d100 = randomDiceGenerator.Next(1, 100);
+            numberOfSides = 100;
             break;
         default:
             
             Console.WriteLine("It seems you have entered an incorrect input.");
             Console.WriteLine("Please select an input from the list above");
-
-            Console.ReadLine();
-            
-            
         }       
     
 
@@ -98,7 +94,7 @@ while (rollDiceAgain)
     int sum = 0;
     for (int i = 1; i <= numberOfDice ; i++)
     {
-        rollValues = randomDiceGenerator.Next(1, diceSelection);
+        rollValues = randomDiceGenerator.Next(1, numberOfSides);
 
         Console.WriteLine(rollValues);
 
