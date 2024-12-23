@@ -29,19 +29,17 @@ while (rollDiceAgain)
             Console.WriteLine("Enter a: 4 to roll a 20-sided die");
             Console.WriteLine("Enter a: 5 to roll a 100-sided die");
             
-            Console.ReadLine();
-            
             isFirstSidesLoop = false;
         }
        else
         {
-         Console.WriteLine("Enter the number of times you would like to roll your selected die or coin.");
+            Console.WriteLine("Please make your selection from the list above to continue.");
         }
+        
         string howManySides = Console.ReadLine();
 
         isSidesANumber = Int32.TryParse(howManySides, out numberOfSides);
-        
-        
+           
     }
     int numberOfDice = 0;
     bool isDiceInputOk = false;
@@ -51,7 +49,9 @@ while (rollDiceAgain)
     {
 
         if (isFirstDiceLoop)
-        { 
+        {
+            Console.WriteLine("Enter the number of times you would like to roll your selected die or coin.");
+            
             isFirstDiceLoop = false;
         }
         else
