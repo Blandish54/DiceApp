@@ -15,12 +15,12 @@ Console.WriteLine("Hello and Welcome to The Dice App");
 while (rollDiceAgain)
 {
     int numberOfSides = 0;
-    bool isSidesANumber = false;
-    bool isFirstSidesLoop = true;
+    bool isUserDiceInputValid = false;
+    bool isFirstUserDiceInputLoop = true;
 
-    while (isSidesANumber == false)
+    while (isUserDiceInputValid == false)
     {
-        if (isFirstSidesLoop)
+        if (isFirstUserDiceInputLoop)
         {
             Console.WriteLine("First we need to select what kind of die you would like to roll");
             Console.WriteLine("Enter a: 1 to flip a coin");
@@ -28,19 +28,49 @@ while (rollDiceAgain)
             Console.WriteLine("Enter a: 3 to roll a 10-sided die");
             Console.WriteLine("Enter a: 4 to roll a 20-sided die");
             Console.WriteLine("Enter a: 5 to roll a 100-sided die");
-            
-            isFirstSidesLoop = false;
+
+            isFirstUserDiceInputLoop = false;
         }
-       else
+        else
         {
+            Console.WriteLine("Enter a: 1 to flip a coin");
+            Console.WriteLine("Enter a: 2 to roll a standard 6-sided die");
+            Console.WriteLine("Enter a: 3 to roll a 10-sided die");
+            Console.WriteLine("Enter a: 4 to roll a 20-sided die");
+            Console.WriteLine("Enter a: 5 to roll a 100-sided die");
             Console.WriteLine("Please make your selection from the list above to continue.");
         }
-        
-        string howManySides = Console.ReadLine();
 
-        isSidesANumber = Int32.TryParse(howManySides, out numberOfSides);
-           
+        string userDiceInput = Console.ReadLine();
+
+
+        switch (userDiceInput)
+        {
+            case "1":
+                numberOfSides = 2;
+                break;
+            case "2":
+                numberOfSides = 6;
+                break;
+            case "3":
+                numberOfSides = 10;
+                break;
+            case "4":
+                numberOfSides = 20;
+                break;
+            case "5":
+                numberOfSides = 100;
+                break;
+
+            default:
+
+                Console.WriteLine("Please select an input from the list below");
+                continue;
+        }
+        isUserDiceInputValid = true;
+
     }
+    
     int numberOfDice = 0;
     bool isDiceInputOk = false;
     bool isFirstDiceLoop = true;
@@ -51,7 +81,7 @@ while (rollDiceAgain)
         if (isFirstDiceLoop)
         {
             Console.WriteLine("Enter the number of times you would like to roll your selected die or coin.");
-            
+
             isFirstDiceLoop = false;
         }
         else
@@ -59,51 +89,24 @@ while (rollDiceAgain)
             Console.WriteLine("It looks like you failed to enter a number.");
             Console.WriteLine("Enter a number to continue.");
         }
-        string howManyDice = Console.ReadLine();
+        string numberOfRolls = Console.ReadLine();
 
-
-        isDiceInputOk = Int32.TryParse(howManyDice, out numberOfDice);
-     }
-    switch (numberOfSides)
-    {
-        case 1:
-            numberOfSides = 2;
-            break;
-        case 2:
-            numberOfSides = 6;
-            break;
-        case 3:
-            numberOfSides = 10;
-            break;
-        case 4:
-            numberOfSides = 20;
-            break;
-        case 5:
-            numberOfSides = 100;
-            break;
-        
-        default:
-            
-            Console.WriteLine("It seems you have entered an incorrect input.");
-            Console.WriteLine("Please select an input from the list above");
-            break;
-        }       
-    
-
-    int rollValues = 0;
-    int sum = 0;
-    for (int i = 1; i <= numberOfDice ; i++)
-    {
-        rollValues = randomDiceGenerator.Next(1, numberOfSides);
-
-        Console.WriteLine(rollValues);
-
-        sum += rollValues;
+        isDiceInputOk = Int32.TryParse(numberOfRolls, out numberOfDice);
     }
 
-     
+    int rollValue = 0;
+    int sumOfRolls = 0;
+    
+    for (int i = 1; i <= numberOfDice; i++)
+    {
+        rollValue = randomDiceGenerator.Next(1, numberOfSides + 1);
 
-    Console.WriteLine($"You Rolled a total of: {sum} ");
+        Console.WriteLine($"Roll number {i} was a:{rollValue}");
+
+        sumOfRolls += rollValue;
+    }
+
+    Console.WriteLine($"You Rolled a total of: {sumOfRolls} ");
     Console.WriteLine("Would you like to roll again?");
     Console.WriteLine("Enter Y/N");
 
