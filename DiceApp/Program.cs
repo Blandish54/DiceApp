@@ -33,11 +33,12 @@ while (rollDiceAgain)
         }
         else
         {
-            Console.WriteLine("Enter a: 1 to flip a coin");
-            Console.WriteLine("Enter a: 2 to roll a standard 6-sided die");
-            Console.WriteLine("Enter a: 3 to roll a 10-sided die");
-            Console.WriteLine("Enter a: 4 to roll a 20-sided die");
-            Console.WriteLine("Enter a: 5 to roll a 100-sided die");
+            Console.WriteLine("Enter");
+            Console.WriteLine("1 to flip a coin");
+            Console.WriteLine("2 to roll a standard 6-sided die");
+            Console.WriteLine("3 to roll a 10-sided die");
+            Console.WriteLine("4 to roll a 20-sided die");
+            Console.WriteLine("5 to roll a 100-sided die");
             Console.WriteLine("Please make your selection from the list above to continue.");
         }
 

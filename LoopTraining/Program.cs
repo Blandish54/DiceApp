@@ -24,3 +24,6 @@ foreach (int number in numbers)
 {
     Console.WriteLine(number);
 }
+
+
+int testing = 
