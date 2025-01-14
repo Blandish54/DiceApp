@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopTraining", "LoopTrainin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator", "TipCalculator\TipCalculator.csproj", "{61DAB215-F5D1-4EF6-B803-7F7D0839D120}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{E2714715-78F1-4D0D-B3E6-17427D720ADF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{61DAB215-F5D1-4EF6-B803-7F7D0839D120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61DAB215-F5D1-4EF6-B803-7F7D0839D120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61DAB215-F5D1-4EF6-B803-7F7D0839D120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2714715-78F1-4D0D-B3E6-17427D720ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2714715-78F1-4D0D-B3E6-17427D720ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2714715-78F1-4D0D-B3E6-17427D720ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2714715-78F1-4D0D-B3E6-17427D720ADF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
