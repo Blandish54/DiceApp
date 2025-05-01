@@ -25,9 +25,10 @@ while (rollDiceAgain)
             Console.WriteLine("First we need to select what kind of die you would like to roll");
             Console.WriteLine("Enter a: 1 to flip a coin");
             Console.WriteLine("Enter a: 2 to roll a standard 6-sided die");
-            Console.WriteLine("Enter a: 3 to roll a 10-sided die");
-            Console.WriteLine("Enter a: 4 to roll a 20-sided die");
-            Console.WriteLine("Enter a: 5 to roll a 100-sided die");
+            Console.WriteLine("Enter a: 3 to roll an 8- sided dice");
+            Console.WriteLine("Enter a: 4 to roll a 10-sided die");
+            Console.WriteLine("Enter a: 5 to roll a 20-sided die");
+            Console.WriteLine("Enter a: 6 to roll a 100-sided die");
 
             isFirstUserDiceInputLoop = false;
         }
@@ -36,9 +37,10 @@ while (rollDiceAgain)
             Console.WriteLine("Enter");
             Console.WriteLine("1 to flip a coin");
             Console.WriteLine("2 to roll a standard 6-sided die");
-            Console.WriteLine("3 to roll a 10-sided die");
-            Console.WriteLine("4 to roll a 20-sided die");
-            Console.WriteLine("5 to roll a 100-sided die");
+            Console.WriteLine("3 to roll a 8-sided dice");
+            Console.WriteLine("4 to roll a 10-sided die");
+            Console.WriteLine("5 to roll a 20-sided die");
+            Console.WriteLine("6 to roll a 100-sided die");
             Console.WriteLine("Please make your selection from the list above to continue.");
         }
 
@@ -54,12 +56,15 @@ while (rollDiceAgain)
                 numberOfSides = 6;
                 break;
             case "3":
+                numberOfSides = 8;
+                break; 
+            case "4":
                 numberOfSides = 10;
                 break;
-            case "4":
+            case "5":
                 numberOfSides = 20;
                 break;
-            case "5":
+            case "6":
                 numberOfSides = 100;
                 break;
 
